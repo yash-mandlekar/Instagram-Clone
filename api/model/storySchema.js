@@ -17,4 +17,4 @@ const storySchema = new mongoose.Schema({
     timestamps: true
 })
 
-module.exports = mongoose.model('Story', storySchema);
+module.exports = mongoose.model('InstaStory', storySchema);

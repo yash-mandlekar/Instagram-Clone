@@ -233,10 +233,10 @@ a {
 
 .phone .phoneimg {
     position: absolute;
-    top: 8vh;
+    top: 64px;
     right: -4.2%;
-    width: 42.6vh;
-    height: 75vh;
+    width: 309px;
+    height: 545px;
     background-repeat: no-repeat;
     animation-name: phone;
     animation-duration: 15s;
@@ -263,6 +263,13 @@ a {
     100% {
         background-image: url("https://www.instagram.com/static/images/homepage/screenshots/screenshot4.png/a4fd825e3d49.png");
     }
+}
+
+@media screen and (max-width: 865px) {
+    .phone {
+        display: none;
+    }
+    
 }
 
 /* ----------------------------------------------------  SignUp Page ------------------------------------------------------> */

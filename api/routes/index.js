@@ -14,23 +14,16 @@ const {
 const {
   getMainpage,
   getProfilepage,
-  getHomepage
+  getHomepage,
+  allUsers,
+  deleteUser
 } = require('../controller/UserController');
 
 router.get('/', getHomepage);
 
-router.get('/users', async (req, res) => {
-  const users = await userModel.find({})
-  res.status(200).json({
-    users
-  })
-});
-router.get('/delete', async (req, res) => {
-  const users = await userModel.findOneAndDelete({ _id: "62b3dfb68f062826ea3265b4" })
-  res.status(200).json({
-    users
-  })
-});
+router.get('/users',allUsers);
+
+router.get('/delete/:id', deleteUser);
 
 router.post('/home', isLoggedIn, getMainpage);
 
