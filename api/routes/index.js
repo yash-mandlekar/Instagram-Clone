@@ -31,8 +31,8 @@ router.get('/users/:username',isProfile, getProfilepage);
 
 router.post('/signup', postRegisterpage);
 
-router.post('/login', postLoginpage);
+router.post('/signin', postsignage);
 
-router.get('/logout', getLogout);
+router.get('/signout', getLogout);
 
 module.exports = router;

@@ -14,7 +14,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api", indexRouter);
 
@@ -26,6 +25,6 @@ app.use(function (req, res, next) {
 
 var server = http.createServer(app);
 
-server.listen(3080, function () {
+server.listen(process.env.port || 3080, function () {
   console.log("Server is running on port 3080");
 });
