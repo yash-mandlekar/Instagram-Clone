@@ -31,7 +31,7 @@ router.get('/users/:username',isProfile, getProfilepage);
 
 router.post('/signup', postRegisterpage);
 
-router.post('/signin', postsignage);
+router.post('/signin', postLoginpage);
 
 router.get('/signout', getLogout);
 

@@ -30,7 +30,7 @@ const Loginpage = ({setauthenticated}) => {
     }
     const loginform = (e) => {
         e.preventDefault()
-        axios.post('/login', {
+        axios.post('/signin', {
             emailornumberorusername: e.target[0].value,
             password: e.target[1].value
           }).then(res => {
