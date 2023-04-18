@@ -15,7 +15,7 @@ import {
 } from "../images";
 
 const Navbar = ({ data, dropdownCss, setdropdownCss, dropdown }) => {
-  const [overlay, setOverlay] = useState(true);
+  const [overlay, setOverlay] = useState(false);
   const navigate = useNavigate();
   const homebtn = () => {
     navigate("/");
