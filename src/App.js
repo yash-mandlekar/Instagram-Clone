@@ -3,7 +3,6 @@ import "./App.css";
 import Loader from "./Components/Loader.jsx";
 import { Routes, Route } from "react-router-dom";
 import axios from "./axios/axios";
-import Skribbl from "./Components/Skribbl";
 const Loginpage = lazy(() => import("./Components/Loginpage.jsx"));
 const Signuppage = lazy(() => import("./Components/Signuppage.jsx"));
 const Navbar = lazy(() => import("./Components/Navbar.jsx"));
@@ -84,10 +83,6 @@ const App = () => {
           <Route
             path="/:username"
             element={<Profilepage data={data} dropdown={dropdown} />}
-          />
-          <Route
-            path="/skribbl"
-            element={<Skribbl />}
           />
 
           <Route
